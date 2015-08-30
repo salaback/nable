@@ -1,4 +1,4 @@
-<?php namespace App;
+<?php namespace nable;
 
 use Illuminate\Auth\Authenticatable;
 use Illuminate\Database\Eloquent\Model;
@@ -33,7 +33,7 @@ class User extends Model implements AuthenticatableContract, CanResetPasswordCon
 
 	public function organizations()
 	{
-		return $this->belongsToMany('App\Organization');
+		return $this->belongsToMany('nable\Organization');
 	}
 
 }

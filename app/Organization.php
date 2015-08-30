@@ -1,4 +1,4 @@
-<?php namespace App;
+<?php namespace nable;
 
 use Illuminate\Database\Eloquent\Model;
 
@@ -8,7 +8,12 @@ class Organization extends Model {
 
 	public function members()
 	{
-		return $this->belongsToMany('App\User');
+		return $this->belongsToMany('nable\User');
+	}
+
+	public function owner()
+	{
+		return $this->hasOne('nable\User');
 	}
 
 }
