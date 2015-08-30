@@ -2,9 +2,10 @@
 
 use Illuminate\Database\Eloquent\Model;
 
+
 class Organization extends Model {
 
-	protected $fillable = ['name', 'type'];
+	protected $fillable = ['name', 'type', 'user_id'];
 
 	public function members()
 	{

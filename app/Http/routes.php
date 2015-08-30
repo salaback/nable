@@ -13,7 +13,9 @@
 
 Route::get('/', 'WelcomeController@index');
 
-Route::get('home', 'HomeController@index');
+Route::get('home', 'DashboardController@home');
+
+Route::resources(['organization' =>'OrganizationController']);
 
 Route::controllers([
 	'auth' => 'Auth\AuthController',
