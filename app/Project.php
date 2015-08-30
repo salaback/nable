@@ -4,7 +4,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class Project extends Model {
 
-	private $fillable = ['name', 'description', 'privacy'];
+	protected $fillable = ['name', 'description', 'privacy'];
 
     public function organization()
     {

@@ -22,7 +22,10 @@
                                     </div>
                                 </div>
                             </div>
-                            @include('includes.project_tile')
+                            @forelse($org->projects as $project)
+                                @include('includes.project_tile')
+                            @empty
+                            @endforelse
                         </div>
                     </div>
                 </div>

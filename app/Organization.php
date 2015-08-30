@@ -17,4 +17,8 @@ class Organization extends Model {
 		return $this->hasOne('nable\User');
 	}
 
+	public function projects()
+	{
+		return $this->hasMany('nable\Project');
+	}
 }
