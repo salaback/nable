@@ -36,4 +36,9 @@ class User extends Model implements AuthenticatableContract, CanResetPasswordCon
 		return $this->belongsToMany('nable\Organization');
 	}
 
+	public function fullName()
+	{
+		return $this->first_name . ' ' . $this->last_name;
+	}
+
 }

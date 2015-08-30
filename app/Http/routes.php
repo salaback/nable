@@ -15,9 +15,12 @@ Route::get('/', 'WelcomeController@index');
 
 Route::get('home', 'DashboardController@home');
 
-Route::resources(['organization' =>'OrganizationController']);
+Route::resources([
+	'organization' =>'OrganizationController',
+	'project' => 'ProjectController'
+]);
 
 Route::controllers([
 	'auth' => 'Auth\AuthController',
-	'password' => 'Auth\PasswordController',
+	'password' => 'Auth\PasswordController'
 ]);
