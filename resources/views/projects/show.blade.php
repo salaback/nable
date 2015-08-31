@@ -22,10 +22,10 @@
                                     </div>
                                 </div>
                             </div>
-                            {{--@forelse($project->topics as $topic)--}}
-                                {{--@include('includes.topic_tile')--}}
-                            {{--@empty--}}
-                            {{--@endforelse--}}
+                            @forelse($project->topics as $topic)
+                                @include('includes.topic_tile')
+                            @empty
+                            @endforelse
                         </div>
                     </div>
                 </div>

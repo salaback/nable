@@ -17,7 +17,10 @@ Route::get('home', 'DashboardController@home');
 
 Route::resources([
 	'organization' =>'OrganizationController',
-	'project' => 'ProjectController'
+	'project' => 'ProjectController',
+	'topic' => 'TopicController',
+	'question' => 'QuestionController',
+	'response' => 'ResponseController'
 ]);
 
 Route::controllers([

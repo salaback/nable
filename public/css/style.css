@@ -1,7 +1,20 @@
 
 
 
-/*Dashboard*/
+/* Dashboard */
 
 .member-panel{
+}
+
+
+/* Topic View */
+
+.question
+{
+    font-weight: bold;
+}
+
+.response
+{
+    padding-left: 20px;
 }
