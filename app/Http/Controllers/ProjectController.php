@@ -1,12 +1,15 @@
 <?php namespace nable\Http\Controllers;
 
+use app\Helpers\Cleaner;
 use nable\Http\Requests;
 use nable\Http\Controllers\Controller;
 
 use Illuminate\Http\Request;
 use nable\Organization;
 use nable\Project;
-use Illuminate\Database\Schema;
+use Illuminate\Support\Facades\Schema;
+use Illuminate\Database\Schema\Blueprint;
+use Illuminate\Database\Migrations\Migration;
 
 class ProjectController extends Controller {
 
@@ -42,14 +45,13 @@ class ProjectController extends Controller {
 		$proj_array = $request->get('project');
 		$project = Project::create($proj_array);
 		$project->members()->attach($proj_array['team']);
-		$table_name =
-		Schema::create('', function(Blueprint $table)
+		$table_name = Cleaner::name($project->name) . '_' . $project->organization->id;
+		$project->table_name = $table_name;
+		$project->save();
+		Schema::create($table_name, function(Blueprint $table)
 		{
 			$table->increments('id');
 			$table->integer('respondent_id');
-			$table->string('name');
-			$table->string('type');
-			$table->json('options');
 			$table->timestamps();
 		});
 

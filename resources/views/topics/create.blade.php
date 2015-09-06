@@ -74,6 +74,31 @@
                                 </div>
                             </div>
                             <div class="form-group">
+                                <label for="r-type" class="control-label col-sm-4">Field Type</label>
+
+                                <div class="col-sm-8">
+                                    <select type="text" class="form-control" id="q-type" name="q-type">
+                                        <option value="null">Select One</option>
+                                        <option value="varchar">String</option>
+                                        <option value="text">Long Text</option>
+                                        <option value="boolean">True/False</option>
+                                        <option value="integer">Integer</option>
+                                        <option value="decimal">Decimal</option>
+                                        <option value="datetime">Date & Time</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="defined" class="control-label col-sm-4">Defined?</label>
+
+                                <div class="col-sm-8">
+                                    <select id="q-defined" class="form-control">
+                                        <option value="false">No</option>
+                                        <option value="true">Yes</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="form-group">
 
                                 <div class="col-sm-offset-4 col-sm-8">
                                     <button class="btn btn-primary" onclick="createQuestion()">Add Question</button>
@@ -102,21 +127,6 @@
 
                             <div class="col-sm-8">
                                 <input type="text" class="form-control" id="r-name" name="name"/>
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <label for="r-type" class="control-label col-sm-4">Field Type</label>
-
-                            <div class="col-sm-8">
-                                <select type="text" class="form-control" id="r-type" name="r-type">
-                                    <option value="null">Select One</option>
-                                    <option value="varchar">String</option>
-                                    <option value="text">Long Text</option>
-                                    <option value="boolean">True/False</option>
-                                    <option value="integer">Integer</option>
-                                    <option value="decimal">Decimal</option>
-                                    <option value="datetime">Date & Time</option>
-                                    </select>
                             </div>
                         </div>
                     </div>
@@ -173,6 +183,8 @@
             var topic_id    = $('#topic_id').val();
             var qname       = $('#q-name').val();
             var question    = $('#q-text').val();
+            var type    = $('#q-type').val();
+            var defined    = $('#q-defined').val();
             $.ajax({
                 url: '/question/',
                 type: 'POST',
@@ -181,7 +193,9 @@
                     question: {
                         topic_id: topic_id,
                         name: qname,
-                        question: question
+                        question: question,
+                        type: type,
+                        defined: defined
                     }
                 }
             }).done(function(data){
@@ -189,6 +203,8 @@
                 $('#questions').append( data );
                 $('#q-name').val(null);
                 $('#q-text').val(null);
+                $('#q-type').val(null);
+                $('#q-defined').val(false);
             });
         }
 

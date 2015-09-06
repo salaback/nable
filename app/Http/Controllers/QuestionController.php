@@ -1,10 +1,14 @@
 <?php namespace nable\Http\Controllers;
 
+use app\Helpers\Cleaner;
+use app\Helpers\Tables;
 use nable\Http\Requests;
 use nable\Http\Controllers\Controller;
 
 use Illuminate\Http\Request;
+use nable\Project;
 use nable\Question;
+use Symfony\Component\Console\Helper\Table;
 
 class QuestionController extends Controller {
 
@@ -36,6 +40,9 @@ class QuestionController extends Controller {
 	public function store(Request $request)
 	{
 		$question = Question::create($request->get('question'));
+		$qname = Cleaner::name($question->name);
+		$project = $question->topic->project;
+		Tables::createDataField($project->table_name, $question->type, $qname);
 		return view('includes.question', compact('question'));
 	}
 

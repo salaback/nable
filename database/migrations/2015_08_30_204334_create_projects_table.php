@@ -19,6 +19,7 @@ class CreateProjectsTable extends Migration {
 			$table->text('description');
 			$table->string('privacy');
 			$table->integer('organization_id');
+			$table->string('table_name');
 			$table->timestamps();
 		});
 	}
