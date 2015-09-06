@@ -21,4 +21,14 @@ class Project extends Model {
         return $this->hasMany('nable\Topic');
     }
 
+    public function respondents()
+    {
+        return $this->hasMany('nable\Respondent');
+    }
+
+    public function toots()
+    {
+        return $this->hasMany('nable\Toot');
+    }
+
 }

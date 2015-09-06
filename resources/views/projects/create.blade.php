@@ -64,6 +64,7 @@
                     </div>
                 </div>
             </div>
+            <input type="hidden" name="project[organization_id]" value="{{$org->id}}">
 
     </div>
     <div class="panel-footer">

@@ -1,12 +1,14 @@
 <?php namespace nable\Http\Controllers;
 
+use app\Helpers\Uploader;
+use Illuminate\Support\Facades\Session;
 use nable\Http\Requests;
 use nable\Http\Controllers\Controller;
+use nable\Project;
 
 use Illuminate\Http\Request;
-use nable\Topic;
 
-class TopicController extends Controller {
+class RespondentController extends Controller {
 
 	/**
 	 * Display a listing of the resource.
@@ -25,8 +27,15 @@ class TopicController extends Controller {
 	 */
 	public function create(Request $request)
 	{
-		$project_id = $request->get('project_id');
-		return view('topics.create', compact('project_id'));
+		$project = Project::find($request->get('project_id'));
+		if($request->get('type') == 'create')
+		{
+			return view('respondents.create', compact('project'));
+		}
+		elseif($request->get('type') == 'upload')
+		{
+			return view('respondents.upload', compact('project'));
+		}
 	}
 
 	/**
@@ -34,10 +43,9 @@ class TopicController extends Controller {
 	 *
 	 * @return Response
 	 */
-	public function store(Request $request)
+	public function store()
 	{
-		$topic = Topic::create($request->get('topic'));
-		return view('includes.topic_heading', compact('topic'));
+		//
 	}
 
 	/**
@@ -48,9 +56,7 @@ class TopicController extends Controller {
 	 */
 	public function show($id)
 	{
-		$topic = Topic::find($id);
-		$project_id = $topic->project_id;
-		return view('topics.create', compact('topic', 'project_id'));
+		//
 	}
 
 	/**
@@ -84,6 +90,17 @@ class TopicController extends Controller {
 	public function destroy($id)
 	{
 		//
+	}
+
+	public function upload(Request $request)
+	{
+		$respondents = Uploader::csvToRespondents(
+			$request->file('file'),
+			$request->get('project_id'));
+
+		Session::flash('flash_success', 'Successfully uploaded ' . $respondents . ' new respondent(s).');
+
+		return redirect('/project/' . $request->get('project_id'));
 	}
 
 }

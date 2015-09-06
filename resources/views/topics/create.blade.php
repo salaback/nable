@@ -3,15 +3,24 @@
 @section('content')
 
     <div class="panel panel-default">
-        <div id="topic-heading" class="panel-heading">
+        <div id="topic-create-heading" class="panel-heading">
+            @if(isset($topic))
+                @include('includes.topic_heading')
+            @else
             Create Topic
+                @endif
         </div>
+
         <div class="panel-body">
             <div class="form-horizontal">
                 <div class="form-group">
                     <label for="name" class="control-label col-sm-4">Topic Name</label>
                     <div class="col-sm-8">
+                        @if(isset($topic))
+                            <b>{{$topic->name}}</b>
+                        @else
                         <input type="text" class="form-control" id="name" name="name"/>
+                        @endif
                     </div>
                 </div>
                 <div class="form-group">
@@ -21,23 +30,34 @@
                         <input type="text" class="form-control" id="tags" name="tags"/>
                     </div>
                 </div>
-                <div class="form-group" id="create-topic-btn">
+                @if(!isset($topic))<div class="form-group" id="create-topic-btn">
                     <div class="col-sm-offset-4 col-sm-8">
                         <button class="btn btn-primary"  onclick="createTopic({{$project_id}})">Create Topic</button>
                     </div>
                 </div>
+                @endif
             </div>
             <div class="col-sm-offset-4 col-sm-8">
-                <div class="panel panel-default hidden" id="questions-wrapper">
+                <div class="panel panel-default @if(!isset($topic))hidden @endif" id="questions-wrapper">
                     <div class="panel-heading">
                         <b>Questions</b>
                     </div>
                     <div class="panel-body">
                         <div class="list-group" id="questions">
+                            @if(isset($topic))
+                                @forelse($topic->questions as $question)
+                                    @include('includes.question')
+                                @empty
+                                    <div class="list-group-item alert-info">
+                                        Please add a question!
+                                    </div>
+                                @endforelse
+                            @endif
+
                         </div>
                     </div>
                 </div>
-                <div class="panel panel-default hidden" id="question-form">
+                <div class="panel panel-default @if(!isset($topic))hidden @endif" id="question-form">
                     <div class="panel-body">
                         <div class="form-horizontal">
                             <div class="form-group">
@@ -66,8 +86,6 @@
         </div>
 
     </div>
-
-    <input type="hidden" id="topic_id" value="@if(isset($topic)) {{$topic->id}} @endif">
 
     <!-- Modal -->
     <div class="modal fade" id="addResponse" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
@@ -126,7 +144,6 @@
             // If necessary, you could initiate an AJAX request here (and then do the updating in a callback).
             // Update the modal's content. We'll use jQuery here, but you could use a data binding library or other methods instead.
             var modal = $(this)
-            modal.find('.modal-title').text('New message to ' + recipient)
             modal.find('#question_id').val(recipient)
         })
 
@@ -145,7 +162,7 @@
                 }
             }).done(function( data ) {
                 $("#create-topic-btn").addClass('hidden');
-                $("#topic_id").val( data );
+                $("#topic-create-heading").html(data);
                 $("#question-form").removeClass('hidden');
                 $('#name').replaceWith( '<B>' + name + '</b>' );
             });

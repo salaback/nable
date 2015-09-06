@@ -1,4 +1,4 @@
-<div class="col-sm-4">
+<div class="col-sm-6">
     <div class="panel panel-default">
         <div class="panel-heading">{{$topic->name}}</div>
         <div class="panel-body">

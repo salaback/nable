@@ -11,16 +11,19 @@
 |
 */
 
-Route::get('/', 'WelcomeController@index');
+Route::get('/', 'DashboardController@home');
 
-Route::get('home', 'DashboardController@home');
+Route::post('upload/respondents', 'RespondentController@upload');
+
+Route::controller('toot/smsquery', '\smsquery\RouteController');
 
 Route::resources([
 	'organization' =>'OrganizationController',
 	'project' => 'ProjectController',
 	'topic' => 'TopicController',
 	'question' => 'QuestionController',
-	'response' => 'ResponseController'
+	'response' => 'ResponseController',
+	'respondent' => 'RespondentController'
 ]);
 
 Route::controllers([

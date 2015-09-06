@@ -2,18 +2,18 @@
 
 use Illuminate\Database\Eloquent\Model;
 
-class Topic extends Model {
+class TootInstance extends Model {
 
-	protected $fillable = ['name', 'project_id'];
+	protected $fillable = ['name', 'project_id', 'toot_id'];
 
     public function project()
     {
         return $this->belongsTo('nable\Project');
     }
 
-    public function questions()
+    public function toot()
     {
-        return $this->hasMany('nable\Question');
+        return $this->belongsTo('nable\Toot');
     }
 
 }

@@ -11,4 +11,9 @@ class Question extends Model {
         return $this->belongsTo('nable\Topic');
     }
 
+    public function responses()
+    {
+        return $this->hasMany('nable\Response');
+    }
+
 }

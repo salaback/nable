@@ -3,7 +3,7 @@
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateQuestionsTable extends Migration {
+class CreateTootInstancesTable extends Migration {
 
 	/**
 	 * Run the migrations.
@@ -12,14 +12,12 @@ class CreateQuestionsTable extends Migration {
 	 */
 	public function up()
 	{
-		Schema::create('questions', function(Blueprint $table)
+		Schema::create('toot_instances', function(Blueprint $table)
 		{
 			$table->increments('id');
-			$table->integer('topic_id');
 			$table->string('name');
-			$table->text('question');
-			$table->string('type');
-			$table->boolean('defined');
+			$table->integer('toot_id');
+			$table->integer('project_id');
 			$table->timestamps();
 		});
 	}
@@ -31,7 +29,7 @@ class CreateQuestionsTable extends Migration {
 	 */
 	public function down()
 	{
-		Schema::drop('questions');
+		Schema::drop('toot_instances');
 	}
 
 }
