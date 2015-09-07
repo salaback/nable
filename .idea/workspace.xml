@@ -2,15 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7ce75995-2a74-485f-ba71-3541a81081e7" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/Helpers/Tables.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/database/migrations/2015_08_30_204334_create_projects_table.php" afterPath="$PROJECT_DIR$/database/migrations/2015_08_30_204334_create_projects_table.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Helpers/Cleaner.php" afterPath="$PROJECT_DIR$/app/Helpers/Cleaner.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/Controllers/ProjectController.php" afterPath="$PROJECT_DIR$/app/Http/Controllers/ProjectController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Question.php" afterPath="$PROJECT_DIR$/app/Question.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/Controllers/QuestionController.php" afterPath="$PROJECT_DIR$/app/Http/Controllers/QuestionController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/topics/create.blade.php" afterPath="$PROJECT_DIR$/resources/views/topics/create.blade.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/includes/question.blade.php" afterPath="$PROJECT_DIR$/resources/views/includes/question.blade.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/includes/response.blade.php" afterPath="$PROJECT_DIR$/resources/views/includes/response.blade.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/Modules/SMSQuery/Migrations.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/modules/smsquery/message.blade.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/database/migrations/2015_09_06_202540_create_toot_instances_table.php" afterPath="$PROJECT_DIR$/database/migrations/2015_09_06_202540_create_toot_instances_table.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Modules/SMSQuery/RouteController.php" afterPath="$PROJECT_DIR$/app/Modules/SMSQuery/RouteController.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Helpers/Tables.php" afterPath="$PROJECT_DIR$/app/Helpers/Tables.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="n-able.iws" />
@@ -70,14 +66,14 @@
     <favorites_list name="n-able" />
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="vertical" split-proportion="0.20886075">
+    <splitter split-orientation="vertical" split-proportion="0.5">
       <split-first>
         <leaf>
-          <file leaf-file-name="Project.php" pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/app/Project.php">
+          <file leaf-file-name="message.blade.php" pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/resources/views/modules/smsquery/message.blade.php">
               <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="1.2043796">
-                  <caret line="31" column="5" selection-start-line="31" selection-start-column="5" selection-end-line="31" selection-end-column="5" />
+                <state vertical-scroll-proportion="0.5479452">
+                  <caret line="141" column="25" selection-start-line="141" selection-start-column="25" selection-end-line="141" selection-end-column="25" />
                   <folding />
                 </state>
               </provider>
@@ -87,14 +83,12 @@
       </split-first>
       <split-second>
         <leaf>
-          <file leaf-file-name="Tables.php" pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/app/Helpers/Tables.php">
+          <file leaf-file-name="Migrations.php" pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/app/Modules/SMSQuery/Migrations.php">
               <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="0.1764706">
-                  <caret line="7" column="45" selection-start-line="7" selection-start-column="45" selection-end-line="7" selection-end-column="45" />
-                  <folding>
-                    <element signature="e#32#70#0#PHP" expanded="true" />
-                  </folding>
+                <state vertical-scroll-proportion="0.4414169">
+                  <caret line="25" column="37" selection-start-line="25" selection-start-column="37" selection-end-line="25" selection-end-column="37" />
+                  <folding />
                 </state>
               </provider>
             </entry>
@@ -109,8 +103,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/resources/views/includes/project_tile.blade.php" />
-        <option value="$PROJECT_DIR$/app/Organization.php" />
         <option value="$PROJECT_DIR$/app/User.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/ProjectsController.php" />
         <option value="$PROJECT_DIR$/resources/views/organizations/show.blade.php" />
@@ -146,9 +138,7 @@
         <option value="$PROJECT_DIR$/database/migrations/2015_09_06_195015_create_toots_table.php" />
         <option value="$PROJECT_DIR$/resources/views/projects/show.blade.php" />
         <option value="$PROJECT_DIR$/app/Http/routes.php" />
-        <option value="$PROJECT_DIR$/database/migrations/2015_09_06_202540_create_toot_instances_table.php" />
         <option value="$PROJECT_DIR$/app/TootInstance.php" />
-        <option value="$PROJECT_DIR$/app/Modules/SMSQuery/RouteController.php" />
         <option value="$PROJECT_DIR$/database/migrations/2015_08_30_231855_create_questions_table.php" />
         <option value="$PROJECT_DIR$/app/Question.php" />
         <option value="$PROJECT_DIR$/resources/views/topics/create.blade.php" />
@@ -160,6 +150,10 @@
         <option value="$PROJECT_DIR$/app/Project.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/QuestionController.php" />
         <option value="$PROJECT_DIR$/app/Helpers/Tables.php" />
+        <option value="$PROJECT_DIR$/database/migrations/2015_09_06_202540_create_toot_instances_table.php" />
+        <option value="$PROJECT_DIR$/resources/views/modules/smsquery/message.blade.php" />
+        <option value="$PROJECT_DIR$/app/Modules/SMSQuery/RouteController.php" />
+        <option value="$PROJECT_DIR$/app/Modules/SMSQuery/Migrations.php" />
       </list>
     </option>
   </component>
@@ -304,6 +298,32 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="modules" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="smsquery" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="n-able" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="n-able" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="resources" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="includes" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -382,29 +402,11 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="Http" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="n-able" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="n-able" />
+              <option name="myItemId" value="Modules" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Http" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Controllers" />
+              <option name="myItemId" value="SMSQuery" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -602,30 +604,11 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="5" />
+      <option name="time" value="6" />
     </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="dbDummy://dbtable:/899b89c1/8988ccc5-a4f0-47fd-8d27-fd6981001fba/nable..organization_user">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-      <provider editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/includes/project_tile.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.21829522">
-          <caret line="7" column="6" selection-start-line="7" selection-start-column="6" selection-end-line="7" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/database/migrations/2015_08_30_220500_create_topics_table.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.4209559">
@@ -1115,36 +1098,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/database/migrations/2015_09_06_202540_create_toot_instances_table.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.7277628">
-          <caret line="19" column="42" selection-start-line="19" selection-start-column="42" selection-end-line="19" selection-end-column="42" />
-          <folding>
-            <marker date="1441571241000" expanded="false" signature="-1:-1" placeholder="..." />
-            <marker date="1441571241000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1441571241000" expanded="true" signature="-1:-1" placeholder=" Run the migrations. ..." />
-            <marker date="1441571241000" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1441571241000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1441571241000" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1441571241000" expanded="true" signature="-1:-1" placeholder=" Reverse the migrations. ..." />
-            <marker date="1441571241000" expanded="true" signature="-1:-1" placeholder="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Modules/SMSQuery/RouteController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.40384614">
-          <caret line="18" column="0" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
-          <folding>
-            <marker date="1441572415000" expanded="false" signature="-1:-1" placeholder="..." />
-            <marker date="1441572415000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1441572415000" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1441572415000" expanded="true" signature="-1:-1" placeholder="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/storage/framework/sessions/566cac51819b03b40096cf82ebd33ad535fa0208">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -1424,75 +1377,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/topics/create.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.74264705">
-          <caret line="92" column="0" selection-start-line="92" selection-start-column="0" selection-end-line="92" selection-end-column="0" />
-          <folding>
-            <marker date="1441575087000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1441575087000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1441575087000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1441575087000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1441575087000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1441575087000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1441575087000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1441575087000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1441575087000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1441575087000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1441575087000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1441575087000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1441575087000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1441575087000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1441575087000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1441575087000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1441575087000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1441575087000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1441575087000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1441575087000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1441575087000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1441575087000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1441575087000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1441575087000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1441575087000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1441575087000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1441575087000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1441575087000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1441575087000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1441575087000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1441575087000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1441575087000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1441575087000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1441575087000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1441575087000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1441575087000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1441575087000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1441575087000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1441575087000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1441575087000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1441575087000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1441575087000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1441575087000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1441575087000" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1441575087000" expanded="true" signature="-1:-1" placeholder="//..." />
-            <marker date="1441575087000" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1441575087000" expanded="true" signature="-1:-1" placeholder="{&quot;url&quot;: '/topic/'...}" />
-            <marker date="1441575087000" expanded="true" signature="-1:-1" placeholder="{&quot;_token&quot;: &quot;{{csrf_token()}}&quot;...}" />
-            <marker date="1441575087000" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1441575087000" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1441575087000" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1441575087000" expanded="true" signature="-1:-1" placeholder="{&quot;url&quot;: '/question/'...}" />
-            <marker date="1441575087000" expanded="true" signature="-1:-1" placeholder="{&quot;_token&quot;: &quot;{{csrf_token()}}&quot;...}" />
-            <marker date="1441575087000" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1441575087000" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1441575087000" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1441575087000" expanded="true" signature="-1:-1" placeholder="{&quot;url&quot;: &quot;/response&quot;...}" />
-            <marker date="1441575087000" expanded="true" signature="-1:-1" placeholder="{&quot;_token&quot;: &quot;{{csrf_token()}}&quot;...}" />
-            <marker date="1441575087000" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1441575087000" expanded="true" signature="-1:-1" placeholder="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/includes/question.blade.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.44117647">
@@ -1514,26 +1398,6 @@
             <marker date="1441580794000" expanded="true" signature="-1:-1" placeholder=" @param string $name ..." />
             <marker date="1441580794000" expanded="true" signature="-1:-1" placeholder="{...}" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Question.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.7808219">
-          <caret line="19" column="0" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
-          <folding>
-            <marker date="1441574553000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1441574553000" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1441574553000" expanded="true" signature="-1:-1" placeholder="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Project.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="1.2043796">
-          <caret line="31" column="5" selection-start-line="31" selection-start-column="5" selection-end-line="31" selection-end-column="5" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1562,10 +1426,57 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/database/migrations/2015_09_06_202540_create_toot_instances_table.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.5610236">
+          <caret line="20" column="37" selection-start-line="20" selection-start-column="37" selection-end-line="20" selection-end-column="37" />
+          <folding>
+            <marker date="1441581819000" expanded="false" signature="-1:-1" placeholder="..." />
+            <marker date="1441581819000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1441581819000" expanded="true" signature="-1:-1" placeholder=" Run the migrations. ..." />
+            <marker date="1441581819000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1441581819000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1441581819000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1441581819000" expanded="true" signature="-1:-1" placeholder=" Reverse the migrations. ..." />
+            <marker date="1441581819000" expanded="true" signature="-1:-1" placeholder="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Project.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="1.3210227">
+          <caret line="31" column="5" selection-start-line="31" selection-start-column="5" selection-end-line="31" selection-end-column="5" />
+          <folding>
+            <marker date="1441581446000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1441581446000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1441581446000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1441581446000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1441581446000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1441581446000" expanded="true" signature="-1:-1" placeholder="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Helpers/Tables.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.59659094">
+          <caret line="26" column="11" selection-start-line="23" selection-start-column="7" selection-end-line="26" selection-end-column="11" />
+          <folding>
+            <marker date="1441581711000" expanded="false" signature="-1:-1" placeholder="..." />
+            <marker date="1441581711000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1441581711000" expanded="true" signature="-1:-1" placeholder=" ..." />
+            <marker date="1441581711000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1441581711000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1441581711000" expanded="true" signature="-1:-1" placeholder="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/Controllers/ProjectController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.22689076">
-          <caret line="9" column="0" selection-start-line="9" selection-start-column="0" selection-end-line="11" selection-end-column="45" />
+        <state vertical-scroll-proportion="0.7130682">
+          <caret line="55" column="11" selection-start-line="50" selection-start-column="8" selection-end-line="55" selection-end-column="11" />
           <folding>
             <marker date="1441580807000" expanded="true" signature="-1:-1" placeholder="..." />
             <marker date="1441580807000" expanded="true" signature="-1:-1" placeholder="..." />
@@ -1589,13 +1500,56 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Helpers/Tables.php">
+    <entry file="file://$PROJECT_DIR$/app/Question.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.1764706">
-          <caret line="7" column="45" selection-start-line="7" selection-start-column="45" selection-end-line="7" selection-end-column="45" />
+        <state vertical-scroll-proportion="0.23622048">
+          <caret line="4" column="30" selection-start-line="4" selection-start-column="30" selection-end-line="4" selection-end-column="30" />
           <folding>
-            <element signature="e#32#70#0#PHP" expanded="true" />
+            <marker date="1441574553000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1441574553000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1441574553000" expanded="true" signature="-1:-1" placeholder="{...}" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/topics/create.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.3773585">
+          <caret line="14" column="41" selection-start-line="14" selection-start-column="41" selection-end-line="14" selection-end-column="41" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/modules/smsquery/message.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.5479452">
+          <caret line="141" column="25" selection-start-line="141" selection-start-column="25" selection-end-line="141" selection-end-column="25" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Modules/SMSQuery/RouteController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.4277929">
+          <caret line="49" column="50" selection-start-line="49" selection-start-column="50" selection-end-line="49" selection-end-column="50" />
+          <folding>
+            <marker date="1441590074000" expanded="false" signature="-1:-1" placeholder="..." />
+            <marker date="1441590074000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1441590074000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1441590074000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1441590074000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1441590074000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1441590074000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1441590074000" expanded="true" signature="-1:-1" placeholder="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Modules/SMSQuery/Migrations.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.4414169">
+          <caret line="25" column="37" selection-start-line="25" selection-start-column="37" selection-end-line="25" selection-end-column="37" />
+          <folding />
         </state>
       </provider>
     </entry>

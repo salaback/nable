@@ -18,6 +18,7 @@ class CreateTootInstancesTable extends Migration {
 			$table->string('name');
 			$table->integer('toot_id');
 			$table->integer('project_id');
+			$table->json('settings');
 			$table->timestamps();
 		});
 	}

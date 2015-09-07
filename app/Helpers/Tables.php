@@ -5,7 +5,7 @@ namespace app\Helpers;
 
 use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
-use Illuminate\Database\Migrations\Migration;git
+use Illuminate\Database\Migrations\Migration;
 
 class Tables
 {
