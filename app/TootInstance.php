@@ -2,7 +2,11 @@
 
 use Illuminate\Database\Eloquent\Model;
 
+use Illuminate\Database\Eloquent\SoftDeletes;
+
 class TootInstance extends Model {
+
+    use SoftDeletes;
 
 	protected $fillable = ['name', 'project_id', 'toot_id'];
 

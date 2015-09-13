@@ -83,7 +83,7 @@ class TopicController extends Controller {
 	 */
 	public function destroy($id)
 	{
-		//
+
 	}
 
 }

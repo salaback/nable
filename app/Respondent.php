@@ -2,7 +2,11 @@
 
 use Illuminate\Database\Eloquent\Model;
 
+use Illuminate\Database\Eloquent\SoftDeletes;
+
 class Respondent extends Model {
+
+    use SoftDeletes;
 
 	protected $fillable = ['first_name', 'last_name', 'dob', 'gender', 'phone_id', 'email_id', 'address_id', 'project_id'];
 
