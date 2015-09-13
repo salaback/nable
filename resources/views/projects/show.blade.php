@@ -10,7 +10,7 @@
             <div class="row">
                 <div class="col-sm-9">
                     <div class="row">
-                        <div class="col-sm-6">
+                        <div class="col-sm-7">
                             <div class="panel panel-primary">
                                 <div class="panel-heading">
                                     Project Topics
@@ -31,7 +31,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col-sm-6">
+                        <div class="col-sm-5">
                             <div class="panel panel-primary">
                                 <div class="panel-heading">
                                     Project Respondents
@@ -46,7 +46,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col-sm-6">
+                        <div class="col-sm-5">
                             <div class="panel panel-primary">
                                 <div class="panel-heading">
                                     Project Toots
