@@ -17,6 +17,14 @@ Route::post('upload/respondents', 'RespondentController@upload');
 
 Route::controller('toot/smsquery', '\smsquery\RouteController');
 
+//Route::controller('/ti/{ti_id?}/', function($ti_id)
+//{
+//	dd('\\' . $ti->toot->namespace . '\RouteController');
+//	$ti = \nable\TootInstance::find($ti_id);
+//
+//	return '\\' . $ti->toot->namespace . '\RouteController';
+//});
+
 Route::resources([
 	'organization' =>'OrganizationController',
 	'project' => 'ProjectController',
