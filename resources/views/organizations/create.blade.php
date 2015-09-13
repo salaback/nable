@@ -26,6 +26,8 @@
                     <select name="organization[type]" class="form-control" id="">
                         <option value="null"> Select One </option>
                         <option value="ed">Educational</option>
+                        <option value="ed">Government</option>
+                        <option value="ed">NGO/Non-profit</option>
                         <option value="corp">Corporate</option>
                     </select>
                 </div>
