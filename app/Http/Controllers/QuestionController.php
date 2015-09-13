@@ -1,7 +1,9 @@
 <?php namespace nable\Http\Controllers;
 
 use app\Helpers\Cleaner;
+use app\Helpers\Permissions;
 use app\Helpers\Tables;
+use League\Flysystem\Exception;
 use nable\Http\Requests;
 use nable\Http\Controllers\Controller;
 
@@ -9,6 +11,7 @@ use Illuminate\Http\Request;
 use nable\Project;
 use nable\Question;
 use Symfony\Component\Console\Helper\Table;
+use Symfony\Component\HttpFoundation\Session\Session;
 
 class QuestionController extends Controller {
 
@@ -39,11 +42,30 @@ class QuestionController extends Controller {
 	 */
 	public function store(Request $request)
 	{
-		$question = Question::create($request->get('question'));
-		$qname = Cleaner::name($question->name);
-		$project = $question->topic->project;
-		Tables::createDataField($project->table_name, $question->type, $qname);
-		return view('includes.question', compact('question'));
+		try {
+			// pull question object
+			$question = Question::create($request->get('question'));
+
+			// clean the question name for db naming
+			$qname = Cleaner::name($question->name);
+
+			// pull project object
+			$project = $question->topic->project;
+
+			// add question field to project table
+			Tables::createDataField($project->table_name, $question->type, $qname);
+		}
+		catch(Exception $e)
+		{
+			return $e;
+		}
+		finally
+		{
+			// return single list group line to ajax requests
+			return view('includes.question', compact('question'));
+		}
+
+
 	}
 
 	/**
@@ -87,7 +109,17 @@ class QuestionController extends Controller {
 	 */
 	public function destroy($id)
 	{
-		//
+		$question = Question::find($id);
+		if(Permissions::hasPermission($question->topic->project_id))
+		{
+			$question->destroy($id);
+			return response('deleted', 200);
+		}
+		else
+		{
+			return response('permission denied', 500);
+		}
+
 	}
 
 }
