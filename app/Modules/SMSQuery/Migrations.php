@@ -24,6 +24,7 @@ class Migrations
         Schema::create($id . '_replies', function(Blueprint $table)
         {
             $table->increments('id');
+            $table->integer('message_id');
             $table->string('reply');
             $table->json('keywords');
             $table->boolean('end');
