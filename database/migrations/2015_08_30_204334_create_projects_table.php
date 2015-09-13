@@ -20,6 +20,7 @@ class CreateProjectsTable extends Migration {
 			$table->string('privacy');
 			$table->integer('organization_id');
 			$table->string('table_name');
+			$table->softDeletes();
 			$table->timestamps();
 		});
 	}

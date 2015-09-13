@@ -19,6 +19,7 @@ class CreateResponsesTable extends Migration {
 			$table->string('name');
 			$table->string('type');
 			$table->json('options');
+			$table->softDeletes();
 			$table->timestamps();
 		});
 	}

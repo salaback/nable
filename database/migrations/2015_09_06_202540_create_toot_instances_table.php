@@ -19,6 +19,7 @@ class CreateTootInstancesTable extends Migration {
 			$table->integer('toot_id');
 			$table->integer('project_id');
 			$table->json('settings');
+			$table->softDeletes();
 			$table->timestamps();
 		});
 	}

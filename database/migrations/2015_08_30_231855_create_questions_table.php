@@ -20,6 +20,7 @@ class CreateQuestionsTable extends Migration {
 			$table->text('question');
 			$table->string('type');
 			$table->boolean('defined');
+			$table->softDeletes();
 			$table->timestamps();
 		});
 	}

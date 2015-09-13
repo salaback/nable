@@ -19,6 +19,7 @@ class CreateRespondentEmailsTable extends Migration {
 			$table->string('type');
 			$table->integer('project_id');
 			$table->integer('respondent_id');
+			$table->softDeletes();
 			$table->timestamps();
 		});
 	}

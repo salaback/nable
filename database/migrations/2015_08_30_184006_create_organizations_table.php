@@ -18,6 +18,7 @@ class CreateOrganizationsTable extends Migration {
 			$table->string('name');
 			$table->string('type');
 			$table->integer('user_id');
+			$table->softDeletes();
 			$table->timestamps();
 		});
 	}

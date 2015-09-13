@@ -17,6 +17,7 @@ class CreateTopicsTable extends Migration {
 			$table->increments('id');
 			$table->integer('project_id');
 			$table->string('name');
+			$table->softDeletes();
 			$table->timestamps();
 		});
 	}

@@ -20,6 +20,7 @@ class CreateTootsTable extends Migration {
 			$table->string('prefix');
 			$table->string('icon');
 			$table->text('description');
+			$table->softDeletes();
 			$table->timestamps();
 		});
 	}
