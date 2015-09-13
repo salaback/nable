@@ -79,7 +79,7 @@
                                 <div class="col-sm-8">
                                     <select type="text" class="form-control" id="q-type" name="q-type">
                                         <option value="null">Select One</option>
-                                        <option value="varchar">String</option>
+                                        <option value="string">String</option>
                                         <option value="text">Long Text</option>
                                         <option value="boolean">True/False</option>
                                         <option value="integer">Integer</option>
@@ -93,8 +93,8 @@
 
                                 <div class="col-sm-8">
                                     <select id="q-defined" class="form-control">
-                                        <option value="false">No</option>
-                                        <option value="true">Yes</option>
+                                        <option value="0">No</option>
+                                        <option value="1">Yes</option>
                                     </select>
                                 </div>
                             </div>
@@ -228,6 +228,20 @@
                 $('#q-response-'+ qid).append( data );
                 $('#r-type').val( null );
                 $('#r-name').val( null );
+            });
+        }
+
+        function deleteQuestion( id )
+        {
+            $.ajax({
+                url: '/question/' + id,
+                type: 'post',
+                data: {
+                    _token: "{{csrf_token()}}",
+                    _method: "delete"
+                }
+                    }).done(function(){
+                $('#question-' + id).addClass('hidden');
             });
         }
     </script>
